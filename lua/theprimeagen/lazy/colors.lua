@@ -1,9 +1,9 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine"
-	vim.cmd.colorscheme(color)
+  color = color or "catppuccin-mocha"
+  vim.cmd.colorscheme(color)
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 end
 
@@ -40,9 +40,38 @@ return {
 
             vim.cmd("colorscheme rose-pine")
 
-            ColorMyPencils()
         end
     },
 
+    {
+        "catppuccin/nvim",
+        lazy = true,
+        config = function ()
+            require('catppuccin').setup( {
+                flavour = "mocha",
+                transparent_background = true,
+                term_colors = true
+            })
+        end
+    },
 
+    {
+        'navarasu/onedark.nvim',
+        lazy = true,
+        config = function ()
+            require('onedark').setup({
+                style = "dark",
+                transparent = true,
+                term_colors = true,
+            })
+            require('onedark').load()
+            ColorMyPencils("onedark")
+        end
+    },
+
+    {
+        "tpope/vim-commentary",
+        lazy = true,
+        event = "BufReadPre",
+    }
 }

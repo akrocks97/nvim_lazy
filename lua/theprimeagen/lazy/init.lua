@@ -5,8 +5,21 @@ return {
         name = "plenary"
     },
 
-    "github/copilot.vim",
-    "eandrju/cellular-automaton.nvim",
     "gpanders/editorconfig.nvim",
+
+    -- {
+    --     "Darazaki/indent-o-matic",
+    --     event = "BufReadPre",
+    --     config = function ()
+    --         require('indent-o-matic').setup({})
+    --     end
+    -- },
+    {
+        'kevinhwang91/nvim-bqf',
+    },
+    {
+        'nvim-treesitter/nvim-treesitter-context',
+    }
+
 }
 

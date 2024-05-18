@@ -12,7 +12,7 @@ return {
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
     },
-
+    event = "BufReadPre",
     config = function()
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
@@ -28,7 +28,7 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
-                "tsserver",
+                "clangd"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
