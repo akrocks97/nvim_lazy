@@ -80,3 +80,9 @@ vim.keymap.set({"n", "v"}, "<leader>f2",
 vim.keymap.set({"n", "v"}, "<leader>f4",
     string.format(":pyf /opt/homebrew/Cellar/clang-format/18.1.3/share/clang/clang-format_4.py") ,
     { desc = "Format Selected Lines"})
+
+
+vim.api.nvim_create_user_command('Q', function()
+  vim.cmd(" mksession! .vscode/session.vim")
+  vim.cmd(" qa")
+end, {})

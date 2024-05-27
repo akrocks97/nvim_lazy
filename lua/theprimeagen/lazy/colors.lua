@@ -37,9 +37,6 @@ return {
             require('rose-pine').setup({
                 disable_background = true,
             })
-
-            vim.cmd("colorscheme rose-pine")
-
         end
     },
 
@@ -65,7 +62,6 @@ return {
                 term_colors = true,
             })
             require('onedark').load()
-            ColorMyPencils("onedark")
         end
     },
 
