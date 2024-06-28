@@ -1,5 +1,6 @@
 return {
     "ThePrimeagen/git-worktree.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function ()
         local Worktree = require("git-worktree")
         local Job = require("plenary.job")
