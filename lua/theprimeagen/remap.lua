@@ -65,6 +65,20 @@ vim.keymap.set("n", "<leader>co", ":copen<CR>", { desc = "[C][O]pen" })
 vim.keymap.set("n", "<leader>cc", ":cclose<CR>", { desc = "[C][C]lose" })
 vim.keymap.set("n", "<leader>fw", ":Telescope grep_string default_text=" .. vim.fn.expand("<cword>") .. "<CR>",
     { desc = '[F]ind [W]ord' })
+vim.keymap.set("n", "<leader>s1", function()
+    local word = vim.fn.expand('<cword>')
+    vim.cmd("syn match S1 /" .. word .. "/") end,
+    { desc = 'Highlight S1' })
+
+vim.keymap.set("n", "<leader>s2", function()
+    local word = vim.fn.expand('<cword>')
+    vim.cmd("syn match S2 /" .. word .. "/") end,
+    { desc = 'Highlight S2' })
+
+vim.keymap.set("n", "<leader>s3", function()
+    local word = vim.fn.expand('<cword>')
+    vim.cmd("syn match S3 /" .. word .. "/") end,
+    { desc = 'Highlight S3' })
 
 local FormatFile =  function()
     vim.command(":'<,'>pyf /opt/homebrew/Cellar/clang-format/18.1.3/share/clang/clang-format.py")

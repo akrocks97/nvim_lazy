@@ -33,3 +33,7 @@ vim.opt.cursorline = true
 -- vim.opt.colorcolumn = "80"
 
 vim.g.python3_host_prog = "/Users/kondaakashgovardhan/miniconda3/bin/python3"
+
+vim.cmd.highlight({ "S1", "guibg=red" })
+vim.cmd.highlight({ "S2", "guibg=green" })
+vim.cmd.highlight({ "S3", "guibg=blue" })
